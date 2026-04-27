@@ -202,3 +202,40 @@ btnLogout.addEventListener('click', () => {
         }, 800);
     }
 });
+
+///pagina login
+ const form = document.getElementById('form-login');
+        const btn = document.getElementById('btn-entrar');
+        const msgErro = document.getElementById('mensagem-erro');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Impede o recarregamento da página
+
+            // Capturando valores via DOM
+            const email = document.getElementById('email').value;
+            const senha = document.getElementById('senha').value;
+
+            // Simulação de Loading (Igual ao que fizemos no checkout)
+            btn.innerText = "Verificando...";
+            btn.style.backgroundColor = "#2c3e50";
+            msgErro.classList.add('hidden');
+
+            setTimeout(() => {
+                // Validação simples de exemplo
+                if (email === "admin@admin.com" && senha === "123456") {
+                    btn.style.backgroundColor = "#27ae60";
+                    btn.innerText = "Sucesso! Redirecionando...";
+                    
+                    // Redireciona para a home após 1 segundo
+                    setTimeout(() => {
+                        window.location.href = "vitrine.html"; 
+                    }, 1000);
+                } else {
+                    // Manipulação do DOM para erro
+                    btn.innerText = "Entrar";
+                    btn.style.backgroundColor = "#3498db";
+                    msgErro.classList.remove('hidden');
+                    msgErro.style.color = "#e74c3c";
+                }
+            }, 1500);
+        });
