@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ <header>
+    <img src="img/techStore_logo.png" alt="" class="logo">
+    <div class="busca-container">
+        <input type="text" id="input-busca" placeholder="Buscar produtos...">
+    </div>
+    <div class="header-actions">
+        <div class="carrinho">
+            🛒 Itens: <span id="contador-carrinho">0</span>
+        </div>
+        <button id="btn-logout" class="btn-secundario">Sair</button>
+    </div>
+</header>
+
+    <main class="vitrine">
+        <div class="produto-card">
+            <img src="img/xbox.jpg" alt="Produto">
+            <h3>Console Xbox Series S</h3>
+            <p class="preco">R$ 3.268,99</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/D_NQ_NP_2X_697644-MLB104435608296_012026-F.webp" alt="Produto">
+            <h3>Microfone Sem Fio Lapela</h3>
+            <p class="preco">R$67,61</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/shopping (1).webp" alt="Produto">
+            <h3>Fone Bluetooth</h3>
+            <p class="preco">R$ 299,00</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+        <div class="produto-card">
+            <img src="img/smartfone.jpg" alt="Produto">
+            <h3>Smartphone X</h3>
+            <p class="preco">R$ 1.999,00</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/shopping.webp" alt="Produto">
+            <h3>Notebook Gamer</h3>
+            <p class="preco">R$ 4.500,00</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/monitor.jpg" alt="Produto">
+            <h3>Monitor Gamer Curvoh</h3>
+            <p class="preco">R$ 1.789,00</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+          <div class="produto-card">
+            <img src="img/D_NQ_NP_2X_618492-MLA99925682911_112025-F.webp" alt="Produto">
+            <h3>Fone De Ouvido Sem Fio Jbl</h3>
+            <p class="preco">R$ 139,00</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/tablet.webp" alt="Produto">
+            <h3>Tablet Samsung Galaxy Tab A11</h3>
+            <p class="preco">R$ 1.384,65</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+
+        <div class="produto-card">
+            <img src="img/mouse.webp" alt="Produto">
+            <h3>Mouse Gamer Sem Fio Bluetooth </h3>
+            <p class="preco">R$ 110,29</p>
+            <button class="btn-comprar">Adicionar ao Carrinho</button>
+        </div>
+    </main>
+
+    <section class="checkout-container">
+    <div class="carrinho-detalhes">
+        <h2>Seu Carrinho</h2>
+        <ul id="lista-carrinho">
+            </ul>
+        <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+    </div>
+
+    <form id="form-checkout">
+        <h3>Entrega e Pagamento</h3>
+        <label>Selecione o Frete:</label>
+        <select id="select-frete">
+            <option value="0">Retirar na Loja - R$ 0,00</option>
+            <option value="15">Padrão - R$ 15,00</option>
+            <option value="40">Expresso - R$ 40,00</option>
+        </select>
+
+        <label>Forma de Pagamento:</label>
+        <select id="metodo-pagamento" required>
+            <option value="Pix">Pix (5% desconto)</option>
+            <option value="Cartão">Cartão de Crédito</option>
+            <option value="Cartão">Cartão de Debito</option>
+        </select>
+
+        <button type="submit" id="btn-finalizar"  >Finalizar Compra</button>
+    </form>
+</section>
+
+<div id="nota-fiscal" class="hidden"></div>
+
+    <script src="script.js">
+    
+    </script>
+</body>
+</html>
